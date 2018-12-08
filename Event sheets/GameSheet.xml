@@ -147,12 +147,17 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">Light.LightID</param>
                                                 </condition>
+                                                <condition id="2" name="Is playing" sid="526162287988820" type="Light">
+                                                    <param id="0" name="Animation">&quot;Light&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
+                                                <action behavior="Fade" id="0" name="Restart fade" sid="700526625925724" type="Light" />
                                                 <action id="4" name="Set animation" sid="981621200031072" type="Light">
                                                     <param id="0" name="Animation">&quot;Dark&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="800717141124885" type="Light" />
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -251,12 +256,17 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">Light.LightID</param>
                                         </condition>
+                                        <condition id="2" name="Is playing" sid="557729928849691" type="Light">
+                                            <param id="0" name="Animation">&quot;Dark&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="732422822350208" type="Light" />
                                         <action id="4" name="Set animation" sid="280274210644520" type="Light">
                                             <param id="0" name="Animation">&quot;Light&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="868944662093793" type="Light" />
                                     </actions>
                                 </event-block>
                             </sub-events>
