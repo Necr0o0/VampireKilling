@@ -11,39 +11,26 @@
                         <condition id="-2" name="On start of layout" sid="165071425363379" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="745574654356264" type="InteractionTrigger">
-                            <param id="0" name="Pin to">Player</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="499092504380003" type="InteractionTrigger">
-                            <param id="0" name="Pin to">Enemy</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
                         <action id="-9" name="Set value" sid="952003258913701" type="System">
                             <param id="0" name="Variable">HowManyPaths</param>
                             <param id="1" name="Value">Path.Count</param>
                         </action>
-                        <action id="-3" name="Create object" sid="420578440371504" type="System">
-                            <param id="0" name="Object to create">Enemy</param>
-                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                            <param id="2" name="X">200</param>
-                            <param id="3" name="Y">200</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="741658605423777" type="TriggerPlayer">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="646567448597481">
+                        <event-block sid="228524758008691">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="463589300322217" type="System">
-                                    <param id="0" name="Object">PlayerEnemy</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="381670150915083" type="PlayerEnemy">
-                                    <param id="0" name="Object">InteractionTrigger</param>
+                                <condition id="-11" name="For Each" sid="651390570595836" type="System">
+                                    <param id="0" name="Object">Enemy</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="820007946462541" type="InteractionTrigger">
-                                    <param id="0" name="Pin to">PlayerEnemy</param>
-                                    <param id="1" name="Mode">1</param>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="623337722386215" type="TriggerEnemy">
+                                    <param id="0" name="Pin to">Enemy</param>
+                                    <param id="1" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -58,7 +45,7 @@
                         <condition id="0" name="On key pressed" sid="175120752785076" type="Keyboard">
                             <param id="0" name="Key">69</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="127251815300431" type="InteractionTrigger">
+                        <condition id="1" name="Is overlapping another object" sid="997607696643392" type="TriggerPlayer">
                             <param id="0" name="Object">LightButton</param>
                         </condition>
                     </conditions>
@@ -87,80 +74,65 @@
         </event-group>
         <event-group description="" sid="572436609062222" title="EnemyMovement">
             <sub-events>
-                <event-block sid="146802282163515">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="380384722166419" type="Enemy" />
-                        <condition disabled="1" id="-8" name="Compare two values" sid="534486633506227" type="System">
-                            <param id="0" name="First value">Path.PathID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">Enemy.MoveID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="615902851747003" type="Enemy" />
-                    </actions>
-                </event-block>
-                <event-block sid="448992093444012">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="734843003828945" type="Enemy" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="346765137883915" type="Function">
-                            <param id="0" name="Name">&quot;SetNewDestination&quot;</param>
-                            <param id="1" name="Parameter {n}">Enemy.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="716702582568407">
-                    <conditions>
-                        <condition id="0" name="On function" sid="543253517012377" type="Function">
-                            <param id="0" name="Name">&quot;SetNewDestination&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="318947684657808" type="Enemy">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="563597913281972" type="Enemy">
-                            <param id="0" name="Instance variable">MoveID</param>
-                            <param id="1" name="Value">int(random(0,HowManyPaths))</param>
-                        </action>
-                        <action id="0" name="Call function" sid="556623624382268" type="Function">
-                            <param id="0" name="Name">&quot;NewGoal&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Set text" sid="951647622964923" type="TextDebug">
-                            <param id="0" name="Text">Enemy.MoveID</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Counter of paths used in random function</comment>
                 <event-block sid="108610441345174">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block any="1" sid="578869767510116">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="314027210389775" type="System" />
-                        <condition id="0" name="On function" sid="180740260514115" type="Function">
-                            <param id="0" name="Name">&quot;NewGoal&quot;</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="464352368032907" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="712296593482812">
+                        <event-block sid="321823204693483">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="508515314776641" type="System">
-                                    <param id="0" name="Object">Path</param>
+                                <condition id="-11" name="For Each" sid="201371181166082" type="System">
+                                    <param id="0" name="Object">Enemy</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="465527619641787" type="System">
-                                    <param id="0" name="First value">Path.PathID</param>
+                                <condition id="-8" name="Compare two values" sid="611321994947116" type="System">
+                                    <param id="0" name="First value">Enemy.MoveID</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">Enemy.MoveID</param>
+                                    <param id="2" name="Second value">Path.PathID</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="612328035764892" type="Enemy">
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="829932463676857" type="Enemy">
+                                    <param id="0" name="X">Path.X</param>
+                                    <param id="1" name="Y">Path.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="551705607177752">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="616040646362936" type="Enemy" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="265106002681111" type="Enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="373971987390714">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="455559019432313" type="Enemy" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="802535223107813" type="Enemy">
+                            <param id="0" name="Instance variable">MoveID</param>
+                            <param id="1" name="Value">int(random(0,HowManyPaths))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="142770312287743">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="543552530931471" type="System">
+                                    <param id="0" name="Object">Path</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="369654276380043" type="System">
+                                    <param id="0" name="First value">Enemy.MoveID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">Path.PathID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="358975395144024" type="Enemy">
                                     <param id="0" name="X">Path.X</param>
                                     <param id="1" name="Y">Path.Y</param>
                                 </action>
@@ -174,7 +146,7 @@
             <sub-events>
                 <event-block sid="287958947858728">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="755345159768228" type="InteractionTrigger">
+                        <condition id="1" name="Is overlapping another object" sid="155273801007723" type="TriggerEnemy">
                             <param id="0" name="Object">LightButton</param>
                         </condition>
                     </conditions>
@@ -193,7 +165,7 @@
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="280274210644520" type="Light">
-                                    <param id="0" name="Visibility">0</param>
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -201,5 +173,13 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="833650348142974">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="600251916065643" type="Enemy" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="122412975060164" type="Enemy" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

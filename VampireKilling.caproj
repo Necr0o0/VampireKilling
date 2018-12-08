@@ -84,37 +84,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="InteractionTrigger" sid="538971669879916">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Pinner" sid="397342587543782" type="string" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pin" sid="868277240578132">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>Enemy</type>
-                <type>InteractionTrigger</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325257300865187" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.164" y="0.208" />
-                            <point x="0.5" y="0" />
-                            <point x="0.856" y="0.148" />
-                            <point x="1" y="0.5" />
-                            <point x="0.872" y="0.872" />
-                            <point x="0.5" y="0.996" />
-                            <point x="0.18" y="0.82" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="LightButton" sid="768343446262355">
             <plugin id="Sprite" />
             <instance-variables>
@@ -152,7 +121,7 @@
             </behaviors>
             <container>
                 <type>Enemy</type>
-                <type>InteractionTrigger</type>
+                <type>TriggerEnemy</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177578175443885" speed="5">
@@ -179,6 +148,58 @@
         </object-type>
         <object-type name="TextDebug" sid="956878822721085">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="TriggerPlayer" sid="778682747133591">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="881350449519877">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="283591078270142" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84" y="0.16" />
+                            <point x="1" y="0.5" />
+                            <point x="0.848" y="0.848" />
+                            <point x="0.5" y="0.976" />
+                            <point x="0.152" y="0.848" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TriggerEnemy" sid="933651312391322">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="549326972062139">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Enemy</type>
+                <type>TriggerEnemy</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313355718733510" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.196" y="0.196" />
+                            <point x="0.516" y="0" />
+                            <point x="0.856" y="0.144" />
+                            <point x="1" y="0.5" />
+                            <point x="0.88" y="0.88" />
+                            <point x="0.5" y="0.98" />
+                            <point x="0.144" y="0.856" />
+                            <point x="0.028" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
