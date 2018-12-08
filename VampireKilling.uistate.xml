@@ -13,6 +13,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Level!</layout>
         <layout active="1" order="2">Level2</layout>
         <event-sheet order="1">GameSheet</event-sheet>
+        <event-sheet order="3">GameSheet2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="0" name="About" />

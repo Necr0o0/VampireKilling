@@ -241,6 +241,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>GameSheet.xml</event-sheet>
+        <event-sheet>GameSheet2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="14" />
