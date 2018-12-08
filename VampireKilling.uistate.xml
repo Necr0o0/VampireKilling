@@ -25,19 +25,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Plugins/" />
+        <folder expanded="0" path="object-folder/LightManager/" />
+        <folder expanded="1" path="object-folder/LightManager/House/" />
+        <folder expanded="0" path="object-folder/EnemyManager/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Light/" />
+        <folder expanded="1" path="animation-folder/LightButton/" />
+        <folder expanded="1" path="animation-folder/Path/" />
+        <folder expanded="1" path="animation-folder/Enemy/" />
+        <folder expanded="1" path="animation-folder/TriggerEnemy/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Wall/" />
-        <folder expanded="1" path="animation-folder/LightButton/" />
-        <folder expanded="1" path="animation-folder/Light/" />
-        <folder expanded="1" path="animation-folder/Enemy/" />
-        <folder expanded="1" path="animation-folder/Path/" />
         <folder expanded="1" path="animation-folder/TriggerPlayer/" />
-        <folder expanded="1" path="animation-folder/TriggerEnemy/" />
     </folders-expanded>
 </c2uistate>

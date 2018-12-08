@@ -342,11 +342,11 @@
                         <x>606</x>
                         <y>398</y>
                         <z>0</z>
-                        <width>895</width>
-                        <height>1853</height>
+                        <width>45</width>
+                        <height>93</height>
                         <depth>0</depth>
-                        <hotspotX>0.510614514</hotspotX>
-                        <hotspotY>0.505126834</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.505376339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -413,7 +413,7 @@
             <instances>
                 <instance type="TriggerPlayer" uid="49">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -518,10 +518,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>273.5</x>
+                        <x>276.204589844</x>
                         <y>304</y>
                         <z>0</z>
-                        <width>497</width>
+                        <width>502.409179688</width>
                         <height>451</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -555,6 +555,45 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ParticleBlood" uid="37">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>Continuous spray</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>32</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>712</x>
+                        <y>7</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -573,7 +612,35 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="LevelCompleted" uid="40">
+                    <properties>
+                        <text>Level Completed!</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial Black,-32,900,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>362</x>
+                        <y>243</y>
+                        <z>0</z>
+                        <width>376</width>
+                        <height>97</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
     </layers>

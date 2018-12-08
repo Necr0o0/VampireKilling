@@ -504,11 +504,11 @@
                         <x>606</x>
                         <y>398</y>
                         <z>0</z>
-                        <width>895</width>
-                        <height>1853</height>
+                        <width>45</width>
+                        <height>93</height>
                         <depth>0</depth>
-                        <hotspotX>0.510614514</hotspotX>
-                        <hotspotY>0.505126834</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.505376339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

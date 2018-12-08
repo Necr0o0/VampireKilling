@@ -12,10 +12,10 @@
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
@@ -29,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>400</width>
-        <height>400</height>
+        <width>1708</width>
+        <height>960</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -51,6 +51,103 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="Plugins">
+            <object-type name="Function" sid="598820349279718">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="270154641707675">
+                <plugin id="Keyboard" />
+            </object-type>
+        </object-folder>
+        <object-folder name="LightManager">
+            <object-folder name="House" />
+            <object-type name="Light" sid="919321058972213">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="The relation to button" name="LightID" sid="811349240651317" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Light" pingpong="0" repeatcount="1" repeatto="0" sid="816810887175292" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Dark" pingpong="0" repeatcount="1" repeatto="0" sid="754059387002258" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LightButton" sid="768343446262355">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Says in which Room light will appear" name="LightButtonID" sid="507081407299407" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743289784863573" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="EnemyManager">
+            <object-type name="Path" sid="551833627194963">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PathID" sid="721806363650005" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709341275543297" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Enemy" sid="859587827628577">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="MoveID" sid="156437449431420" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="258837294486378">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Enemy</type>
+                    <type>TriggerEnemy</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177578175443885" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TriggerEnemy" sid="933651312391322">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="549326972062139">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Enemy</type>
+                    <type>TriggerEnemy</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313355718733510" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.196" y="0.196" />
+                                <point x="0.516" y="0" />
+                                <point x="0.856" y="0.144" />
+                                <point x="1" y="0.5" />
+                                <point x="0.88" y="0.88" />
+                                <point x="0.5" y="0.98" />
+                                <point x="0.144" y="0.856" />
+                                <point x="0.028" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Player" sid="904672081659558">
             <plugin id="Sprite" />
             <behaviors>
@@ -63,7 +160,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253613025230130" speed="5">
-                    <frame duration="1" hotspotX="0.510615" hotspotY="0.505127" original-source="C:\Users\Necr0\OneDrive\Desktop\vampire full.png">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.505376" original-source="C:\Users\Necr0\OneDrive\Desktop\vampire full.png">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="0.494382" y="0" />
@@ -95,71 +192,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LightButton" sid="768343446262355">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="Says in which Room light will appear" name="LightButtonID" sid="507081407299407" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743289784863573" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Light" sid="919321058972213">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="The relation to button" name="LightID" sid="811349240651317" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Light" pingpong="0" repeatcount="1" repeatto="0" sid="816810887175292" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="Dark" pingpong="0" repeatcount="1" repeatto="0" sid="754059387002258" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Keyboard" sid="270154641707675">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Enemy" sid="859587827628577">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="MoveID" sid="156437449431420" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pathfinding" sid="258837294486378">
-                    <behavior id="Pathfinding" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>Enemy</type>
-                <type>TriggerEnemy</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177578175443885" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Path" sid="551833627194963">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="PathID" sid="721806363650005" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709341275543297" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ShadowLight" sid="410021334373589">
-            <plugin id="shadowlight" />
-        </object-type>
-        <object-type name="Function" sid="598820349279718">
-            <plugin id="Function" />
-        </object-type>
         <object-type name="TextDebug" sid="956878822721085">
             <plugin id="Text" />
         </object-type>
@@ -187,33 +219,12 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TriggerEnemy" sid="933651312391322">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="549326972062139">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>Enemy</type>
-                <type>TriggerEnemy</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313355718733510" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.196" y="0.196" />
-                            <point x="0.516" y="0" />
-                            <point x="0.856" y="0.144" />
-                            <point x="1" y="0.5" />
-                            <point x="0.88" y="0.88" />
-                            <point x="0.5" y="0.98" />
-                            <point x="0.144" y="0.856" />
-                            <point x="0.028" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="ParticleBlood" sid="506829907165819">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="LevelCompleted" sid="484811528412292">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
