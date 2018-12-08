@@ -579,11 +579,14 @@
                         <destroy-mode>Fade to invisible</destroy-mode>
                         <timeout>1</timeout>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>712</x>
-                        <y>7</y>
+                        <x>696</x>
+                        <y>-94</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -618,7 +621,7 @@
                         <text>Level Completed!</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial Black,-32,900,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -221,6 +222,11 @@
         </object-type>
         <object-type name="ParticleBlood" sid="506829907165819">
             <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="853434483768790">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
             <texture />
         </object-type>
         <object-type name="LevelCompleted" sid="484811528412292">
