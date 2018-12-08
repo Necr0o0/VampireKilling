@@ -242,6 +242,7 @@
     <layout-folder>
         <layout>Level!.xml</layout>
         <layout>Level2.xml</layout>
+        <layout>Lavel3.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameSheet.xml</event-sheet>
