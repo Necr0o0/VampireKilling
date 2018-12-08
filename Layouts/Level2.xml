@@ -4,8 +4,8 @@
     <sid>378743409065366</sid>
     <event-sheet>GameSheet</event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>1920</width>
+        <height>2060</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -40,8 +40,8 @@
                         <x>-3</x>
                         <y>-8</y>
                         <z>0</z>
-                        <width>1710</width>
-                        <height>981</height>
+                        <width>2038</width>
+                        <height>2127</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -114,8 +114,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1045</x>
-                        <y>305</y>
+                        <x>1621</x>
+                        <y>307</y>
                         <z>0</z>
                         <width>18</width>
                         <height>476</height>
@@ -280,8 +280,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>536</x>
-                        <y>452</y>
+                        <x>525</x>
+                        <y>596</y>
                         <z>0</z>
                         <width>18</width>
                         <height>165</height>
@@ -321,9 +321,9 @@
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>200</max-speed>
+                                <max-speed>400</max-speed>
                                 <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
+                                <deceleration>1200</deceleration>
                                 <directions>8 directions</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
