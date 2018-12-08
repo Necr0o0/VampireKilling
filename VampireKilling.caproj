@@ -101,7 +101,10 @@
                 <instance-variable comment="The relation to button" name="LightID" sid="811349240651317" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816810887175292" speed="5">
+                <animation framecount="1" loop="0" name="Light" pingpong="0" repeatcount="1" repeatto="0" sid="816810887175292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dark" pingpong="0" repeatcount="1" repeatto="0" sid="754059387002258" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -211,10 +214,11 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Level!.xml</layout>
+        <layout>Level2.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>GameSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="14" />
