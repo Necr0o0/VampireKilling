@@ -29,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1708</width>
-        <height>960</height>
+        <width>400</width>
+        <height>400</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -63,7 +63,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253613025230130" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.510615" hotspotY="0.505127" original-source="C:\Users\Necr0\OneDrive\Desktop\vampire full.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.494382" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.497297" />
+                            <point x="1" y="1" />
+                            <point x="0.494382" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.497297" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

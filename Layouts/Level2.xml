@@ -325,7 +325,7 @@
                                 <acceleration>600</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>8 directions</directions>
-                                <set-angle>360 degree (smooth)</set-angle>
+                                <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -342,11 +342,11 @@
                         <x>606</x>
                         <y>398</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>895</width>
+                        <height>1853</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.510614514</hotspotX>
+                        <hotspotY>0.505126834</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
